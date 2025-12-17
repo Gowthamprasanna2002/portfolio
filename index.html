@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body {
+            background-color:rgb(28, 40, 64);
+                width: 1300px;
+
+        }
+
+        #bar {
+            position: sticky;
+            top: 30px;
+        }
+
+        #name {
+            color: white;
+            font-weight: bolder;
+            margin-left: 150px;
+        }
+
+        ul {
+            display: flex;
+            justify-content: center;
+            margin-left: 700px;
+        }
+
+        li {
+            text-decoration: none;
+            color: white;
+            list-style-type: none;
+            margin-left: 35px;
+            margin-top: -40px;
+            font-size: 20px;
+            font-weight: 300px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        #para {
+            color: white;
+            margin-left: 400px;
+            margin-top: 200px;
+            line-height: 20px;
+
+        }
+
+        #per {
+            font-size: 60px;
+        }
+
+        #role {
+            color: rgb(1, 238, 255);
+        }
+
+        #social {
+            margin-left: 10px;
+            margin-top: 70px;
+        }
+
+        .facebook {
+            height: 35px;
+            width: 35px;
+            border: 3px solid rgb(1, 238, 255);
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .instagram {
+            position: absolute;
+            height: 35px;
+            width: 35px;
+            border: 3px solid rgb(1, 238, 255);
+            border-radius: 50%;
+            margin-left: 60px;
+        }
+
+        .linked {
+            position: absolute;
+            height: 35px;
+            width: 35px;
+            border: 3px solid rgb(1, 238, 255);
+            border-radius: 50%;
+            margin-left: 120px;
+        }
+
+        .fa-brands {
+            padding-left: 7px;
+            padding-top: 9px;
+        }
+
+        #button {
+            height: 33px;
+            width: 120px;
+            background-color: rgb(1, 238, 255);
+            border: 1px solid rgb(1, 238, 255);
+            position: absolute;
+            margin-top: 100px;
+            box-shadow: 2px -2px 4px 3px rgb(1, 238, 255);
+            border-radius: 30px;
+            padding-left: 34px;
+            padding-top: 10px;
+        }
+
+        .button {
+            color: black;
+            font-weight: 500px;
+        }
+
+        #button:hover {
+            box-shadow: none;
+        }
+
+        #box {
+            height: 400px;
+            border: 1px solid grey;
+            width: 300px;
+            margin-left: 400px;
+            margin-top: -250px;
+            background-color: grey;
+            border-radius: 0px 60px 60px 0px;
+        }
+
+        #december {
+            height: 800px;
+            background: linear-gradient(120deg, #1c2840 50%, gray 50%);
+            margin-top: -30px;
+            margin-left: -10px;
+            /* Ensures the background covers the full viewport height */
+            /* Removes default body margin */
+        }
+         #container{
+            height: 500px;
+            width: 915px;
+            background-color: #24323b;
+            margin-left: 100px;
+            margin-top: 400px;
+            padding-left: 600px;
+            padding-top: 200px;
+            font-size: 25px
+        }
+        .box2{
+            height: 400px;
+            width: 270px;
+            border: 1px solid purple;
+            margin-top: -600px;
+            margin-left: -200px;
+            border-radius: 20px 0px 0px 20px;
+            background-color: purple;
+        }
+        span{
+            color: #63E6BE;
+        }
+        #read{
+             height: 33px;
+          width: 130px;
+          background-color:rgb(1, 238, 255) ;
+          border: 1px solid rgb(1, 238, 255);
+          position: absolute;
+          margin-top: 100px;
+          box-shadow: 2px -2px 4px 3px rgb(1, 238, 255);
+          border-radius: 30px;
+          padding-left: 30px;
+          padding-top: 10px;
+        }
+        #read:hover{
+            box-shadow: none;
+        }
+        #container1{
+            height: 800px;
+            
+        }
+        #new{
+            height: 300px;
+            width: 400px;
+            background-color: #24323b;
+            border: 1px solid #24323b;
+            border-radius: 30px;
+            margin-left: -300px;
+            margin-top: 200px;
+        }
+        #new1{
+            position: absolute;
+             height: 300px;
+            width: 400px;
+            background-color: #24323b;
+            border: 1px solid #24323b;
+            border-radius: 30px;
+            margin-left: 160px;
+            margin-top: -300px;
+        }
+        #new2{
+             position: absolute;
+             height: 300px;
+            width: 400px;
+            background-color: #24323b;
+            border: 1px solid #24323b;
+            border-radius: 30px;
+            margin-left: 630px;
+            margin-top: -300px;
+        }
+        #new:hover{
+            border: 1px solid rgb(1, 238, 255);
+        }
+        #new1:hover{
+             border: 1px solid rgb(1, 238, 255);
+        }
+         #new2:hover{
+             border: 1px solid rgb(1, 238, 255);
+        }
+        .st{
+        font-size: 30px; /* Adjust font size as needed */
+        font-weight: bold;
+        background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); /* Define your colors */
+        -webkit-background-clip: text; /* Clip the background to the text shape */
+        background-clip: text;
+        -webkit-text-fill-color: transparent; /* Make the text transparent to reveal the background */
+        color: transparent; 
+        text-align: center;
+        }
+        #skill{
+            height: 600px;
+            width:  168.8%;
+            background-color: #24323b;
+            margin-left: -407px;
+            margin-top: -100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="december">
+        <div id="bar">
+            <nav>
+                <h2 id="name">RESUME</h2>
+                <ul>
+                    <li><a href="#para">Home</a></li>
+                    <li><a href="#container">About</a></li>
+                    <li><a href="">Education</a></li>
+                    <li><a href="">Skills</a></li>
+                    <li><a href="">Contact me</a></li>
+
+                </ul>
+            </nav>
+        </div>
+        <div id="para">
+            <h2>Hello, It's Me</h2>
+            <h1 id="per">GOWTHAM</h1>
+            <h2>AND I'M A</h2>
+            <h2 id="role">WEB DESIGNER</h2>
+
+            <div id="social">
+                <div class="facebook">
+                    <i class="fa-brands fa-facebook-f" style="color: #63E6BE;"></i>
+                </div>
+                <div class="instagram">
+                    <i class="fa-brands fa-instagram" style="color: #63E6BE;"></i>
+                </div>
+                <div class="linked">
+                    <i class="fa-brands fa-linkedin-in" style="color: #63E6BE;"></i>
+                </div>
+                <div id="button"><a class="button" href="">Download CV</a></div>
+            </div>
+        </div>
+         <div id="container">
+        <h1>About <span>Me</span></h1>
+        <h1 style="font-size: 25px; font-weight: bold;">WEB DESIGNER</h1>
+        <h3 style="font-size: 17px; font-weight: 100px;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">I am a web Designer , I have a knowledge in Html, Css, Java Script, Jquery <br> and Bootstrap. </h3>
+        <div id="read"><a class="button" href="">Read More</a></div>
+
+    </div>
+    <div class="box2"></div>
+    <div id="container1">
+        <h1 style="margin-left: 250px; margin-top: 300px;font-size: 50px;">Education</h1>
+        <div id="new">
+            <h2 class="st">2021 - 2025</h2>
+            <h3 style="text-align: center;">BE COMPUTER SCIENCE AND ENGINEERING</h3>
+            <h3 style="text-align: center;">DHIRAJLAL GANDHI COLLEGE OF TECHNOLOGY</h3>
+            <h3 style="text-align: center; ;">SALEM.</h3>
+        </div>
+        <div id="new1">
+            <h2 class="st">2021</h2>
+            <h3 style="text-align: center;">HSC</h3>
+            <h3 style="text-align: center;">SRK MATRICULATION HIGHER SECONDARY SCHOOL</h3>
+            <h3 style="text-align: center;">SALEM.</h3>
+        </div>
+        <div id="new2">
+            <h2 class="st">2019</h2>
+            <h3 style="text-align: center;padding-top: 10px;">SSLC</h3>
+            <h3 style="text-align: center;">LITTLE FLOWER MATRICULATION SCHOOL</h3>
+            <h3 style="text-align: center;">SALEM.</h3>
+        </div>
+    </div>
+    <div id="skill">
+        <h1 style="text-align: center; padding-top: 100px;">Skills</h1>
+    </div>
+
+</body>
+
+</html>
