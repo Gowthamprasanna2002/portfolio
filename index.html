@@ -396,9 +396,10 @@
         <form id="contact-form">
           <h1 style="padding-top: 20px;">Contact Me</h1>
         <input type="text" placeholder="Name" id="name">
-        <input type="text" placeholder="Email" id="email"><br><br>
-        <textarea name="Message" id="message">Message</textarea><br>
-        <button style="margin-left: 10px; font-size: 20px;">Send Message</button>
+        <input type="email" placeholder="Email" id="email" required><br><br>
+        <textarea id="message" name="message" placeholder="Message"></textarea><br>
+        <button type="submit" style="margin-left: 10px; font-size: 20px;">Send Message</button>
+          <p id="status" style="margin-top: 15px; color: lightgreen; font-size: 18px;"></p>
         </form>
     </div>
     <footer>
@@ -434,22 +435,36 @@
   })();
 
   document.getElementById("contact-form").addEventListener("submit", function (e) {
-    e.preventDefault();
+  e.preventDefault();
 
-    emailjs.send("service_8wulxlp", "template_ns9g0gz", {
-      name: document.getElementById("name").value,
-      email: document.getElementById("email").value,
-      message: document.getElementById("message").value,
-    })
-    .then(() => {
-      alert("Message sent successfully!");
-      document.getElementById("contact-form").reset();
-    })
-    .catch((error) => {
-      alert("Failed to send message.");
-      console.error(error);
-    });
+  const btn = document.querySelector("#contact-form button");
+  const status = document.getElementById("status");
+  
+  // Disable button while sending
+  btn.disabled = true;
+  btn.innerText = "Sending...";
+
+  emailjs.send("service_8wulxlp", "template_ns9g0gz", {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value,
+  })
+  .then(() => {
+    status.style.color = "lightgreen";
+    status.innerText = "✅ Message sent successfully!";
+    document.getElementById("contact-form").reset();
+    btn.disabled = false;
+    btn.innerText = "Send Message";
+  })
+  .catch((error) => {
+    status.style.color = "red";
+    status.innerText = "❌ Failed to send message. Try again.";
+    console.error(error);
+    btn.disabled = false;
+    btn.innerText = "Send Message";
   });
+});
+
     </script>
   </body>
 </html>
