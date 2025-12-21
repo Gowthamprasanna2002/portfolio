@@ -3,389 +3,438 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>Portfolio | Gowtham</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
 
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
       body {
         background-color: #1c2840;
         scroll-behavior: smooth;
+        color: white;
+        overflow-x: hidden;
       }
-      h2 {
-        margin-left: 90px;
-        font-weight: bolder;
-      }
+
       nav {
-        color: white;
-      }
-      li {
-        list-style-type: none;
-      }
-      ul {
         display: flex;
-        justify-content: end;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 8%;
+        background-color: #1c2840;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
       }
-      li {
-        margin-left: -30px;
-        margin-top: -40px;
-        margin-right: 90px;
-        font-size: 20px;
-        font-weight: 500px;
-      }
-      #pro {
+
+      nav h2 {
+        font-weight: bolder;
         color: white;
-        margin-top: 150px;
-        margin-left: 300px;
-        font-family: sans-serif;
-        font-size: 20px;
-        line-height: 50px;
+        margin: 0;
       }
-      .name {
-        font-size: 55px;
-        font-family: sans-serif;
-        margin-left: 80px;
-        
-        
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 25px;
       }
-      #pro1 {
-        color: white;
-        margin-top: -190px;
-        margin-left: 300px;
-      }
-      .multiple-text {
-        color: lightblue;
-      }
-      #design {
-        margin-top: 60px;
-      }
-      a {
+
+      nav a {
         color: white;
         text-decoration: none;
+        font-size: 18px;
+        font-weight: 500;
+        transition: 0.3s;
       }
-      #social {
-        margin-top: 160px;
-        margin-left: 385px;
+
+      nav a:hover {
+        color: #0fcade;
+      }
+
+      .hero {
         display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 80px 8%;
+        min-height: 90vh;
       }
-      .fa {
-        border: 2px solid lightblue;
+
+      .hero-text {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      .hero-text h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .hero-text .name {
+        font-size: clamp(40px, 8vw, 70px);
+        font-weight: 800;
+        margin: 10px 0;
+        color: white;
+      }
+
+      .hero-text h2:last-of-type {
+        font-size: 30px;
+      }
+
+      .multiple-text {
+        color: #0fcade;
+      }
+
+      .hero-img {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        min-width: 300px;
+      }
+
+      #pr {
+        height: 350px;
+        width: 350px;
         border-radius: 50%;
-        width: 35px;
-        padding-top: 10px;
-        padding-left: 2px;
-        height: 30px;
-      }
-      .fa:hover{
-        background-color: blue;
-      }
-      .in {
-        border: 2px solid lightblue;
-        border-radius: 50%;
-        padding-top: 10px;
-        width: 32px;
-        margin-left: 20px;
-        height: 30px;
-        padding-left: 7px;
-      }
-      .li:hover{
         background-color: #0fcade;
+        box-shadow: 0px 0px 30px #0fcade;
+        border: 2px solid white;
       }
-      .in:hover{
-        background-color: palevioletred;
-        
+
+      .cta-container {
+        margin-top: 30px;
       }
-      .li {
-        border: 2px solid lightblue;
+
+      #social {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 30px;
+      }
+
+      #social div {
+        border: 2px solid #0fcade;
         border-radius: 50%;
-        padding-top: 10px;
-        padding-left: 7px;
-        width: 32px;
-        margin-left: 20px;
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.4s;
       }
+
+      #social div:hover {
+        background-color: #0fcade;
+        transform: translateY(-5px);
+      }
+
+      #social a {
+        color: white;
+        font-size: 20px;
+      }
+
       button {
-        margin-left: 370px;
-        margin-top: 80px;
         width: 200px;
         border-radius: 30px;
         height: 50px;
-        border: 1px solid #0fcade;
+        border: none;
         background-color: #0fcade;
         box-shadow: 0px 0px 20px #0fcade;
+        cursor: pointer;
+        transition: 0.3s;
       }
+
+      button:hover {
+        box-shadow: none;
+        transform: scale(1.05);
+      }
+
       #bu {
         color: black;
         font-size: 17px;
+        font-weight: bold;
+        text-decoration: none;
       }
-      button:hover {
-        box-shadow: none;
-      }
-      #pr {
-        height: 300px;
-        border: 1px solid white;
-        border-radius: 50%;
-        width: 300px;
-        margin-left: 970px;
-        margin-top: -410px;
-        background-color: #0fcade;
-        box-shadow: 0px 0px 20px #0fcade;
-      }
+
       #About {
-        height: 400px;
-        margin-top: 150px;
+        padding: 100px 8%;
         background-color: #24323b;
-        margin-left: -4px;
-        width: 100.7%;
+        text-align: center;
         color: #facc15;
-        padding-top: 100px;
-        line-height: 30px;
       }
+
       .ab {
-        font-size: 50px;
-        text-align: center;
+        font-size: 45px;
+        margin-bottom: 20px;
       }
+
       #co {
+        max-width: 900px;
+        margin: 0 auto;
         color: #dbeafe;
-        margin-top: 100px;
-        margin-left: 300px;
+        line-height: 1.8;
       }
+
       #ed {
-        height: 800px;
-        color: white;
+        padding: 100px 8%;
+        text-align: center;
       }
+
       .edu {
-        text-align: center;
-        padding-top: 100px;
-        font-size: 50px;
+        font-size: 45px;
+        margin-bottom: 60px;
       }
-      .a {
-        height: 300px;
-        width: 350px;
-        border-radius: 30px;
-        margin-top: 100px;
-        margin-left: 200px;
-        text-align: center;
-        position: relative;
-        box-shadow: 0px 0px 30px white;
+
+      .edu-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
       }
-      .b {
-        position: absolute;
-        height: 300px;
-        width: 350px;
-        box-shadow: 0px 0px 30px white;
-        border-radius: 30px;
-        margin-top: -300px;
-        margin-left: 600px;
-        text-align: center;
-      }
+
+      .a,
+      .b,
       .c {
-        position: absolute;
-        height: 300px;
-        width: 350px;
-        box-shadow: 0px 0px 30px white;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 40px 20px;
         border-radius: 30px;
-        margin-top: -300px;
-        margin-left: 1000px;
-        text-align: center;
+        box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
+        transition: 0.3s;
       }
-      .n {
-        font-family: sans-serif;
+
+      .a:hover,
+      .b:hover,
+      .c:hover {
+        transform: translateY(-10px);
+        border: 1px solid #0fcade;
       }
+
+      .a h2,
+      .b h2,
+      .c h2 {
+        margin-bottom: 15px;
+        color: #0fcade;
+      }
+
       #skill {
-        height: 1300px;
+        padding: 100px 8%;
         background-color: #24323b;
-        margin-left: -3px;
-        width: 100.5%;
-        color: yellowgreen;
-        font-size: 20px;
-      }
-      .box1 {
-        height: 300px;
-        width: 250px;
-        border: 1px solid;
-        border-radius: 10px;
-        background-color: white;
-        margin-left: 450px;
-        position: relative;
-        box-shadow: 0px 0px 30px #0fcade;
-      }
-      .box2 {
-        height: 300px;
-        width: 250px;
-        border: 1px solid;
-        border-radius: 10px;
-        background-color: white;
-        margin-left: 800px;
-        margin-top: -300px;
-        position: absolute;
-        box-shadow: 0px 0px 30px #0fcade;
-      }
-      .box3 {
-        position: absolute;
-        height: 300px;
-        width: 250px;
-        border: 1px solid;
-        border-radius: 10px;
-        background-color: white;
-        margin-left: 1150px;
-        margin-top: -300px;
-        box-shadow: 0px 0px 30px #0fcade;
-      }
-      .box4 {
-        position: absolute;
-        height: 300px;
-        width: 250px;
-        border: 1px solid;
-        border-radius: 10px;
-        background-color: white;
-        margin-left: 430px;
-        margin-top: 100px;
-        box-shadow: 0px 0px 30px #0fcade;
-      }
-      .box5 {
-        position: absolute;
-        height: 300px;
-        width: 250px;
-        border: 1px solid;
-        border-radius: 10px;
-        background-color: white;
-        margin-left: 800px;
-        margin-top: 100px;
-        box-shadow: 0px 0px 30px #0fcade;
-      }
-      #contact {
-        height: 750px;
-        color: white;
         text-align: center;
-        font-size: 30px;
       }
-      .box1:hover {
-        box-shadow: none;
-        cursor: pointer;
+
+      .skill-title {
+        color: yellowgreen;
+        font-size: 40px;
+        margin-bottom: 50px;
       }
-      .box2:hover {
-        box-shadow: none;
-        cursor: pointer;
+
+      .skill-category {
+        text-align: left;
+        margin: 40px 0 20px;
+        color: white;
+        font-size: 22px;
       }
-      .box3:hover {
-        box-shadow: none;
-        cursor: pointer;
+
+      .skills-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        justify-items: center;
       }
-      .box4:hover {
-        box-shadow: none;
-        cursor: pointer;
+
+      .box1,
+      .box2,
+      .box3,
+      .box4,
+      .box5 {
+        height: 250px;
+        width: 100%;
+        max-width: 250px;
+        border-radius: 15px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 0px 20px #0fcade;
+        transition: 0.3s;
+        padding: 20px;
       }
+
+      .box1 img,
+      .box2 img,
+      .box3 img,
+      .box4 img,
+      .box5 img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+
+      .box1:hover,
+      .box2:hover,
+      .box3:hover,
+      .box4:hover,
       .box5:hover {
+        transform: scale(1.05);
         box-shadow: none;
-        cursor: pointer;
       }
-      input {
-        height: 40px;
-        width: 300px;
+
+      #contact {
+        padding: 100px 8%;
+        text-align: center;
+      }
+
+      #contact h1 {
+        font-size: 40px;
+        margin-bottom: 40px;
+      }
+
+      #contact-form {
+        max-width: 600px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 15px;
+        border-radius: 10px;
         border: none;
         outline: none;
+        background: #f0f0f0;
+        font-size: 16px;
       }
+
       textarea {
-        height: 300px;
-        width: 600px;
-        outline: none;
+        height: 200px;
+        resize: vertical;
       }
+
       footer {
-        height: 100px;
+        padding: 40px 8%;
         background-color: #24323b;
-        margin-left: -3px;
-        width: 100.5%;
-        margin-top: 15px;
+        text-align: center;
       }
-      .fo {
-        color: white;
-        font-size: 20px;
-        margin-left: 200px;
-        padding-top: 50px;
+
+      .edu-grid,
+      .skills-container {
+        perspective: 1000px;
       }
-      
-@media (max-width: 768px) {
 
-  nav {
-    flex-direction: column;
-    gap: 20px;
-  }
+      .a,
+      .b,
+      .c,
+      .box1,
+      .box2,
+      .box3,
+      .box4,
+      .box5 {
+        transform-style: preserve-3d;
+        transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+          box-shadow 0.3s;
+      }
 
-  ul {
-    flex-direction: column;
-    align-items: center;
-  }
+      .a:hover,
+      .b:hover,
+      .c:hover,
+      .box1:hover,
+      .box2:hover,
+      .box3:hover,
+      .box4:hover,
+      .box5:hover {
+        /* Rotates the card slightly and moves it closer to the user */
+        transform: rotateY(15deg) rotateX(10deg) translateZ(20px) !important;
+        box-shadow: -15px 15px 30px rgba(15, 202, 222, 0.3) !important;
+      }
 
-  .name {
-    font-size: 36px;
-  }
+      .a h2,
+      .b h2,
+      .c h2,
+      .box1 img,
+      .box2 img,
+      .box3 img,
+      .box4 img,
+      .box5 img {
+        transform: translateZ(40px);
+      }
 
-  textarea {
-    width: 90%;
-  }
-
-  input {
-    width: 90%;
-    margin-bottom: 10px;
-  }
-
-  #About, #skill, #contact {
-    padding: 20px;
-    text-align: center;
-  }
-
-  .fo {
-    margin-left: 0;
-    text-align: center;
-  }
-}
-
+      @media (max-width: 768px) {
+        nav {
+          flex-direction: column;
+          gap: 20px;
+        }
+        nav ul {
+          gap: 15px;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .hero {
+          flex-direction: column-reverse;
+          text-align: center;
+          padding-top: 40px;
+        }
+        #social {
+          justify-content: center;
+        }
+        #pr {
+          height: 250px;
+          width: 250px;
+          margin-bottom: 40px;
+        }
+      }
     </style>
   </head>
+
   <body>
     <nav>
       <h2>RESUME</h2>
       <ul>
-        <li><a href="#pro">Home</a></li>
+        <li><a href="#">Home</a></li>
         <li><a href="#About">About</a></li>
         <li><a href="#ed">Education</a></li>
         <li><a href="#skill">Skills</a></li>
-        <li><a href="#contact">Contact me</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
 
-    <div data-aos="fade-left" id="pro">
-      <h2>Hello,it's Me</h2>
-      <h2 id="design">And I'am a <br /><span class="multiple-text"></span></h2>
-    </div>
-    <div data-aos="fade-right" id="pro1">
-      <h1 class="name">GOWTHAM</h1>
-    </div>
+    <header class="hero">
+      <div class="hero-text" data-aos="fade-right">
+        <h2>Hello, it's Me</h2>
+        <h1 class="name">GOWTHAM</h1>
+        <h2>And I'm a <span class="multiple-text"></span></h2>
 
-    <div id="social">
-      <div class="fa">
-        <a href=""
-          ><i class="fa-brands fa-facebook-f fa-lg" style="color: #63e6be"></i
-        ></a>
+        <div class="cta-container">
+          <div id="social">
+            <div>
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+            <div>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div>
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <button><a id="bu" href="#" download>Download CV</a></button>
+        </div>
       </div>
-      <div class="in">
-        <a href=""
-          ><i class="fa-brands fa-instagram fa-lg" style="color: #63e6be"></i
-        ></a>
-      </div>
-      <div class="li">
-        <a href=""
-          ><i class="fa-brands fa-linkedin-in fa-lg" style="color:whitesmoke "></i
-        ></a>
-      </div>
-    </div>
-    <button><a id="bu" href="" download>Download CV</a></button>
-    <div id="pr"></div>
 
-    <div id="About">
+      <div class="hero-img" data-aos="fade-left">
+        <div id="pr"></div>
+      </div>
+    </header>
+
+    <section id="About">
       <div data-aos="fade-down">
         <h1 class="ab">About Me</h1>
       </div>
@@ -393,110 +442,93 @@
         <h3 class="n">
           I’m a Front-End Developer passionate about building responsive,
           user-friendly web applications. I specialize in translating design
-          <br />
           concepts into clean, efficient, and accessible code using modern web
-          technologies. I enjoy creating seamless user experiences <br />
-          and continuously improving my skills to stay up to date with the
-          latest trends in web development.
+          technologies. I enjoy creating seamless user experiences and
+          continuously improving my skills to stay up to date with the latest
+          trends in web development.
         </h3>
       </div>
-    </div>
-    <div data-aos="fade-down" id="ed">
-      <h1 class="edu">Education</h1>
-      <div data-aos="fade-right" class="a">
-        <h2 style="margin-left: 10px; padding-top: 30px">2021-2025</h2>
-        <h3 style="padding-top: 30px">BE COMPUTER SCIENCE AND ENGINEERING</h3>
-        <h3>DHIRAJLAL GANDHI COLLEGE OF TECHNOLOGY</h3>
-        <h3>SALEM.</h3>
+    </section>
+
+    <section id="ed">
+      <h1 class="edu" data-aos="fade-down">Education</h1>
+      <div class="edu-grid">
+        <div data-aos="fade-right" class="a">
+          <h2>2021-2025</h2>
+          <h3>BE COMPUTER SCIENCE AND ENGINEERING</h3>
+          <p>DHIRAJLAL GANDHI COLLEGE OF TECHNOLOGY</p>
+          <p>SALEM.</p>
+        </div>
+        <div data-aos="fade-up" class="b">
+          <h2>2021</h2>
+          <h3>HSC</h3>
+          <p>SRK MATRICULATION HIGHER SECONDARY SCHOOL</p>
+          <p>SALEM.</p>
+        </div>
+        <div data-aos="fade-left" class="c">
+          <h2>2019</h2>
+          <h3>SSLC</h3>
+          <p>LITTLE FLOWER MATRICULATION SCHOOL</p>
+          <p>SALEM.</p>
+        </div>
       </div>
-      <div data-aos="fade-up" class="b">
-        <h2 style="margin-left: -10px">2021</h2>
-        <h3 style="padding-top: 30px">
-          HSC SRK MATRICULATION HIGHER SECONDARY SCHOOL
-        </h3>
-        <h3>SALEM.</h3>
+    </section>
+
+    <section id="skill">
+      <h1 class="skill-title" data-aos="fade-down">SKILLS</h1>
+
+      <h3 class="skill-category" data-aos="fade-right">FRONTEND:</h3>
+      <div class="skills-container">
+        <div data-aos="zoom-in" class="box1">
+          <img src="./html.png" alt="HTML" />
+        </div>
+        <div data-aos="zoom-in" class="box2">
+          <img src="./css.img" alt="CSS" />
+        </div>
+        <div data-aos="zoom-in" class="box3">
+          <img src="./js image.png" alt="JS" />
+        </div>
       </div>
-      <div data-aos="fade-left" class="c">
-        <h2 style="margin-left: -10px">2019</h2>
-        <h3 style="padding-top: 30px">
-          SSLC LITTLE FLOWER MATRICULATION SCHOOL
-        </h3>
-        <h3>SALEM.</h3>
+
+      <h3 class="skill-category" data-aos="fade-right">FRAMEWORKS:</h3>
+      <div class="skills-container">
+        <div data-aos="zoom-in" class="box4">
+          <img src="./jquery.jpeg" alt="jQuery" />
+        </div>
+        <div data-aos="zoom-in" class="box5">
+          <img src="./bt.jpeg" alt="Bootstrap" />
+        </div>
       </div>
-    </div>
-    <div id="skill">
-      <h1 data-aos="fade-down" style="padding-top: 100px; text-align: center">
-        SKILLS
-      </h1>
-      <h3 data-aos="fade-right" style="margin-left: 200px; margin-top: 200px">
-        FRONTEND:
-      </h3>
-      <div data-aos="fade-up" class="box1">
-        <img
-          src="./html.png"
-          alt=""
-          style="margin-top: 50px; margin-left: 20px"
-        />
-      </div>
-      <div data-aos="fade-up" class="box2">
-        <img
-          src="./css.img"
-          alt=""
-          style="margin-top: 30px; margin-left: 10px"/>
-      </div>
-      <div data-aos="fade-up" class="box3">
-        <img
-          src="./js image.png"
-          alt=""
-          style="margin-top: 30px; margin-left: 10px"
-        />
-      </div>
-      <h3 style="margin-left: 190px; margin-top: 70px">FRAMEWORKS:</h3>
-      <div data-aos="fade-up" class="box4">
-        <img
-          src="./jquery.jpeg"
-          alt=""
-          height="300px"
-          width="250px"
-          style="border-radius: 20px"
-        />
-      </div>
-      <div data-aos="fade-up" class="box5">
-        <img src="./bt.jpeg" style="margin-top: 15px;" alt="" height="270px" width="250px" />
-      </div>
-    </div>
-    <div id="contact">
+    </section>
+
+    <section id="contact">
       <form id="contact-form">
-        <h1 style="padding-top: 20px">Contact Me</h1>
-        <input type="text" placeholder="Name" id="name" />
-        <input
-          type="email"
-          placeholder="Email"
-          id="email"
+        <h1 data-aos="fade-up">Contact Me</h1>
+        <input type="text" placeholder="Name" id="name" required />
+        <input type="email" placeholder="Email" id="email" required />
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Your Message"
           required
-        /><br /><br />
-        <textarea id="message" name="message" placeholder="Message"></textarea
-        ><br />
-        <button type="submit" style="margin-left: 10px; font-size: 20px">
-          Send Message
+        ></textarea>
+        <button type="submit">
+          <span id="bu">Send Message</span>
         </button>
-        <p
-          id="status"
-          style="margin-top: 15px; color: lightgreen; font-size: 18px"
-        ></p>
+        <p id="status" style="margin-top: 15px"></p>
       </form>
-    </div>
+    </section>
+
     <footer>
-      <h3  class="fo">Copyright © 2025 by Gowtham | All Rights Reserved.</h3>
+      <h3 class="fo">Copyright © 2025 by Gowtham | All Rights Reserved.</h3>
     </footer>
 
     <script src="https://unpkg.com/typed.js@2.0.12"></script>
-
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
     <script>
-      AOS.init();
+      AOS.init({ duration: 1000, once: true });
 
       new Typed(".multiple-text", {
         strings: ["Front-End Developer", "Web Designer", "Coder"],
@@ -507,20 +539,18 @@
       });
 
       (function () {
-        emailjs.init("VXH-YRfOeEdbvfsH4"); // Step 4 key
+        emailjs.init("VXH-YRfOeEdbvfsH4");
       })();
 
       document
         .getElementById("contact-form")
         .addEventListener("submit", function (e) {
           e.preventDefault();
-
-          const btn = document.querySelector("#contact-form button");
+          const btn = this.querySelector("button");
           const status = document.getElementById("status");
 
-          // Disable button while sending
           btn.disabled = true;
-          btn.innerText = "Sending...";
+          status.innerText = "Sending...";
 
           emailjs
             .send("service_8wulxlp", "template_ns9g0gz", {
@@ -531,16 +561,13 @@
             .then(() => {
               status.style.color = "lightgreen";
               status.innerText = "✅ Message sent successfully!";
-              document.getElementById("contact-form").reset();
+              this.reset();
               btn.disabled = false;
-              btn.innerText = "Send Message";
             })
             .catch((error) => {
               status.style.color = "red";
-              status.innerText = "❌ Failed to send message. Try again.";
-              console.error(error);
+              status.innerText = "❌ Failed to send message.";
               btn.disabled = false;
-              btn.innerText = "Send Message";
             });
         });
     </script>
