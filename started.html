@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+
+        nav {
+            height: 50px;
+            width: 100%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            box-shadow: 0px 1px 0.5px lightgrey;
+        }
+
+        ul {
+            display: flex;
+            margin-left: 150px;
+        }
+
+        li {
+            list-style: none;
+            position: relative;
+        }
+
+        a {
+            text-decoration: none;
+            color: grey;
+            margin-left: 40px;
+            font-size: 17px;
+            padding-bottom: 14px;
+        }
+
+        a:hover {
+            color: black;
+        }
+
+
+        .active {
+            color: black;
+            border-bottom: 3px solid black;
+        }
+
+
+        nav ul ul {
+            display: none;
+            position: absolute;
+            top: 30px;
+            background: white;
+            padding: 10px;
+        }
+
+        nav li:hover>ul {
+            display: block;
+        }
+
+
+        .s {
+            height: 30px;
+            margin-left: 200px;
+            border: none;
+            background-color: #ebeff1;
+            border-radius: 30px;
+            outline: none;
+            padding: 0 15px;
+        }
+
+
+        #box {
+            display: flex;
+            gap: 30px;
+            margin-left: 130px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        #box::-webkit-scrollbar {
+            display: none;
+
+        }
+
+        .box1,
+        .box2,
+        .box3,
+        .box4,
+        .box5,
+        .box6,
+        .box7 {
+            height: 270px;
+            width: 300px;
+            border-radius: 20px;
+            flex-shrink: 0;
+            color: white;
+        }
+
+        .box1 {
+            background: linear-gradient(#884cfc 70%, white 30%);
+        }
+
+        .box2 {
+            background: linear-gradient(green 70%, white 30%);
+        }
+
+        .box3 {
+            background: linear-gradient(pink 70%, white 30%);
+        }
+
+        .box4 {
+            background: linear-gradient(blue 70%, white 30%);
+        }
+
+        .box5 {
+            background: linear-gradient(orange 70%, white 30%);
+        }
+
+        .box6 {
+            background: linear-gradient(red 70%, white 30%);
+        }
+
+        .box7 {
+            background: linear-gradient(teal 70%, white 30%);
+        }
+
+
+        .left,
+        .right {
+            position: absolute;
+            top: 150px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            opacity: 0.6;
+        }
+
+        .left {
+            left: 80px;
+            transform: rotate(90deg);
+            margin-top: -80px;
+        }
+
+        .right {
+            right: 80px;
+            transform: rotate(270deg);
+            margin-top: -70px;
+        }
+
+        /* =========================
+   TABLET (max-width: 1024px)
+========================= */
+        @media (max-width: 1024px) {
+
+            ul {
+                margin-left: 50px;
+            }
+
+            .s {
+                margin-left: 50px;
+                width: 180px;
+            }
+
+            #box {
+                margin-left: 50px;
+            }
+
+            h1,
+            h3 {
+                margin-left: 50px !important;
+            }
+
+            .left {
+                left: 20px;
+            }
+
+            .right {
+                right: 20px;
+            }
+        }
+
+        /* =========================
+   MOBILE (max-width: 768px)
+========================= */
+        @media (max-width: 768px) {
+
+            nav {
+                height: auto;
+                padding: 10px 0;
+                flex-wrap: wrap;
+            }
+
+            ul {
+                margin-left: 0;
+                justify-content: center;
+                width: 100%;
+            }
+
+            a {
+                margin-left: 20px;
+                font-size: 15px;
+            }
+
+            .s {
+                margin: 10px auto;
+                width: 80%;
+                display: block;
+            }
+
+            h1,
+            h3 {
+                margin-left: 20px !important;
+                font-size: 22px;
+            }
+
+            #box {
+                margin-left: 20px;
+                gap: 20px;
+            }
+
+            .box1,
+            .box2,
+            .box3,
+            .box4,
+            .box5,
+            .box6,
+            .box7 {
+                width: 260px;
+                height: 240px;
+            }
+
+            .left,
+            .right {
+                display: none;
+                /* swipe scroll on mobile */
+            }
+        }
+
+        /* =========================
+   SMALL MOBILE (max-width: 480px)
+========================= */
+        @media (max-width: 480px) {
+
+            a {
+                margin-left: 12px;
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            h3 {
+                font-size: 14px;
+            }
+
+            .box1,
+            .box2,
+            .box3,
+            .box4,
+            .box5,
+            .box6,
+            .box7 {
+                width: 220px;
+                height: 220px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a class="active" href="">Explore</a></li>
+            <li><a href="">Problems</a></li>
+            <li><a href="">Contest</a></li>
+            <li><a href="">Discuss</a></li>
+            <li><a class="drop" href="">Interview</a>
+                <ul>
+                    <li><a style="margin-left: -130px;" href="">Interview</a></li>
+                    <li><a style="margin-left: -130px;" href="">Assessment</a></li>
+                </ul>
+            </li>
+
+            <li><a class="drop1" style="color: orange;" href="">Store</a>
+                <ul>
+                    <li style="margin-left: -120px;color: orange;">Reedem</li>
+                    <li style="margin-left: -120px;color: orange;">Premium</li>
+                </ul>
+            </li>
+        </ul>
+        <input class="s" type="search" placeholder="search">
+        <p class="p"><a class="pr" href="">Premium</a></p>
+
+    </nav>
+    <h3 style="color: lightgrey;margin-left: 200px;">Welcome to</h3>
+    <h1 style="margin-left: 200px;color: rgb(56, 54, 59);">LeetCode Explore</h1>
+    <h1 style="margin-left: 200px;color: grey;margin-top: 100px;">Featured</h1>
+    <div style="position: relative;">
+        <button class="left" onclick="scrollLeftBtn()">
+            <img src="./images/icons8-expand-arrow-50.png">
+        </button>
+
+        <div id="box">
+            <div class="box1">
+                <h4>Leetcode's Interview Crash Course</h4>
+                <h2>Data Structures & Algorithms</h2>
+            </div>
+            <div class="box2">
+                <h4>Leetcode's Interview Crash Course</h4>
+                <h2>Data Structures & Algorithms</h2>
+            </div>
+            <div class="box3">
+                <h4>Leetcode's Interview Crash Course</h4>
+                <h2>Data Structures & Algorithms</h2>
+            </div>
+            <div class="box4">
+                <h4>Leetcode's Interview Crash Course</h4>
+                <h2>Data Structures & Algorithms</h2>
+            </div>
+            <div class="box5">
+                <h4>Leetcode's Interview Crash Course</h4>
+                <h2>Data Structures & Algorithms</h2>
+            </div>
+            <div class="box6">
+                <h4>Leetcode's Interview Crash Course</h4>
+                <h2>Data Structures & Algorithms</h2>
+            </div>
+            <div class="box7">
+                <h4>Leetcode's Interview Crash Course</h4>
+                <h2>Data Structures & Algorithms</h2>
+            </div>
+        </div>
+
+        <button class="right" onclick="scrollRightBtn()">
+            <img src="./images/icons8-expand-arrow-50.png">
+        </button>
+    </div>
+
+
+    <script>
+        const box = document.getElementById("box");
+
+        function scrollLeftBtn() {
+            box.scrollLeft -= 330;
+        }
+
+        function scrollRightBtn() {
+            box.scrollLeft += 330;
+        }
+    </script>
+
+
+</body>
+
+</html>

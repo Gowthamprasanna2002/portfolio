@@ -107,7 +107,7 @@
         border-radius: 50%;
         background-color: #0fcade;
         box-shadow: 0px 0px 30px #0fcade;
-        border: 2px solid white;
+        border: none;
       }
 
       .cta-container {
@@ -392,6 +392,117 @@
           margin-bottom: 40px;
         }
       }
+      
+#projects {
+    padding: 100px 8%;
+    background-color: #1c2840; 
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+    perspective: 1000px; 
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px 25px;
+    border-radius: 20px;
+    border: 1px solid rgba(15, 202, 222, 0.2);
+    transition: transform 0.6s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card:hover {
+    transform: rotateY(10deg) rotateX(5deg) translateZ(10px);
+    border-color: #0fcade;
+    box-shadow: 0 15px 35px rgba(15, 202, 222, 0.2);
+}
+
+.icon-project {
+    font-size: 45px;
+    color: #0fcade;
+    margin-bottom: 20px;
+}
+
+.project-card h2 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: #dbeafe;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.tags span {
+    background: rgba(15, 202, 222, 0.1);
+    color: #0fcade;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    border: 1px solid rgba(15, 202, 222, 0.3);
+}
+
+.view-btn {
+    background: #0fcade;
+    color: #1c2840;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    display: inline-block;
+    width: fit-content;
+    transition: 0.3s;
+}
+
+.view-btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+
+@media (max-width: 992px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 768px) {
+    #projects {
+        padding: 60px 5%;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .project-card {
+        padding: 30px 20px;
+        transform: none !important; 
+    }
+    
+    .project-card:hover {
+        transform: translateY(-5px) !important; 
+}
+}
     </style>
   </head>
 
@@ -473,6 +584,47 @@
         </div>
       </div>
     </section>
+    <section id="projects">
+  <h1 class="edu" data-aos="fade-down">My Projects</h1>
+  
+  <div class="projects-grid">
+    <div class="project-card" data-aos="zoom-in">
+      <div class="project-inner">
+        <i class="fa-solid fa-code icon-project"></i>
+        <h2>LeetCode Clone</h2>
+        <p>A technical platform featuring a logic-based code editor, problem dashboard, and submission tracking.</p>
+        <div class="tags">
+          <span>Html</span> <span>Css</span> <span>Java Script</span>
+        </div>
+        <a href="./index1.html" class="view-btn">View Code</a>
+      </div>
+    </div>
+
+    <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+      <div class="project-inner">
+        <i class="fa-brands fa-instagram icon-project" style="color: #E1306C;"></i>
+        <h2>Instagram Clone</h2>
+        <p>A social media UI with post feeds, image uploads, and interactive like/comment features.</p>
+        <div class="tags">
+          <span>Html</span> <span>Css</span> <span>Java Script</span>
+        </div>
+        <a href="./index2.html" class="view-btn">View Demo</a>
+      </div>
+    </div>
+
+    <div class="project-card" data-aos="zoom-in" data-aos-delay="400">
+      <div class="project-inner">
+        <i class="fa-solid fa-list-check icon-project" style="color: #facc15;"></i>
+        <h2>To-Do App</h2>
+        <p>A sleek productivity application with task categorization, search, and local data persistence.</p>
+        <div class="tags">
+          <span>JavaScript</span> <span>HTML5</span> <span>Local Storage</span>
+        </div>
+        <a href="./index3.html" class="view-btn">View Project</a>
+      </div>
+    </div>
+  </div>
+</section>
 
     <section id="skill">
       <h1 class="skill-title" data-aos="fade-down">SKILLS</h1>

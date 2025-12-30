@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Instagram</title>
+<link rel="stylesheet" href="home.css" />
+</head>
+
+<body>
+
+<!-- TOP NAV -->
+<header class="nav">
+  <h1 class="logo">Instagram</h1>
+  <input class="search" type="text" placeholder="Search" />
+  <div class="icons">
+    <span>🏠</span>
+    <span>💬</span>
+    <span>➕</span>
+    <span>🧭</span>
+    <span>❤️</span>
+    <span onclick="logout()">👤</span>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main class="container">
+
+  <!-- FEED -->
+  <section class="feed">
+
+    <!-- STORIES -->
+    <div class="stories">
+      <div class="story">You</div>
+      <div class="story">alex</div>
+      <div class="story">john</div>
+      <div class="story">maria</div>
+      <div class="story">sara</div>
+    </div>
+
+    <!-- POST -->
+    <article class="post">
+      <div class="post-head">
+        <span><b>alex</b></span>
+        <span>⋯</span>
+      </div>
+
+      <img src="https://picsum.photos/500/500?random=1" />
+
+      <div class="post-actions">
+        <div>
+          <span onclick="like()">🤍</span>
+          <span>💬</span>
+          <span>📤</span>
+        </div>
+        <span>🔖</span>
+      </div>
+
+      <p class="likes">12,345 likes</p>
+      <p><b>alex</b> Instagram UI clone 🔥</p>
+      <p class="view">View all comments</p>
+    </article>
+
+  </section>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <p><b>@your_username</b></p>
+    <p class="suggest">Suggestions for you</p>
+    <p class="small">Frontend clone project</p>
+  </aside>
+
+</main>
+
+<script>
+  
+let liked = false;
+
+function like() {
+  let btn = document.getElementById("likeBtn");
+  let count = document.getElementById("likeCount");
+
+  if (!liked) {
+    btn.innerText = "❤️";
+    count.innerText = Number(count.innerText) + 1;
+    liked = true;
+  } else {
+    btn.innerText = "🤍";
+    count.innerText = Number(count.innerText) - 1;
+    liked = false;
+  }
+}
+
+</script>
+</body>
+</html>

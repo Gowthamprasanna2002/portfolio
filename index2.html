@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+        }
+
+        #top {
+            height: 50px;
+            width: 100%;
+            background-color: white;
+            box-shadow: 0px 0px 2px rgba(0, 0, 0.2);
+        }
+
+        #a {
+            padding-top: 25px;
+            padding-left: 30px;
+        }
+
+        .ins {
+            font-family: cursive;
+            margin-left: 300px;
+            margin-top: -40px;
+        }
+
+        #bar {
+            height: 1300px;
+            width: 380px;
+            border: 1px solid white;
+            box-shadow: -3px 3px 10px;
+            margin-left: 500px;
+            padding-top: 8px;
+        }
+
+        .c1 {
+            height: 70px;
+            width: 75px;
+            border: 1px solid;
+            border-radius: 50%;
+            margin-left: 10px;
+            background-color: whitesmoke;
+            position: relative;
+        }
+
+        .c2 {
+            height: 70px;
+            width: 75px;
+            border: 1px solid;
+            border-radius: 50%;
+            margin-left: 100px;
+            background-color: orange;
+            position: absolute;
+            margin-top: -73px;
+        }
+
+        .c3 {
+            height: 70px;
+            width: 75px;
+            border: 1px solid black;
+            border-radius: 50%;
+            margin-left: 190px;
+            background-color: yellow;
+            position: absolute;
+            margin-top: -73px;
+        }
+
+        .c4 {
+            height: 70px;
+            width: 75px;
+            border: 1px solid;
+            border-radius: 50%;
+            margin-left: 280px;
+            background-color: blue;
+            margin-top: -73px;
+        }
+
+        .name1 {
+            margin-top: 70px;
+        }
+
+        .name2 {
+            margin-top: 70px;
+            margin-left: 20px;
+        }
+
+        .name3 {
+            margin-top: 70px;
+            margin-left: 24px;
+
+        }
+
+        .name4 {
+            margin-top: 70px;
+
+
+        }
+
+        #img {
+            margin-top: 140px;
+
+        }
+
+        button {
+            margin-left: 1200px;
+            padding-top: -10px;
+            height: 30px;
+            width: 100px;
+            border-radius: 30px;
+            margin-top: -80px;
+            outline: none;
+            border: 1px solid black;
+            background-color: red;
+            background-image: linear-gradient(to right, red, yellow);
+        }
+
+        #b {
+            text-decoration: none;
+            color: black;
+
+        }
+
+        .pic {
+            height: 40px;
+            width: 40px;
+            border: 1px solid;
+            margin-top: 40px;
+            margin-left: 10px;
+            border-radius: 50%;
+        }
+
+        .p1 {
+            margin-left: 50px;
+            margin-top: -25px;
+        }
+
+        #p2 {
+            margin-left: 50px;
+        }
+
+        .like {
+            display: flex;
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+
+        #p3 {
+            margin-left: 20px;
+        }
+
+        #p4 {
+            margin-left: 20px;
+        }
+
+        #p5 {
+            margin-left: 20px;
+        }
+
+        #p6 {
+            margin-left: 140px;
+        }
+
+        .fol {
+            margin-left: 150px;
+            margin-top: 0px;
+        }
+
+        #dot {
+            margin-top: 18px;
+            margin-left: 330px;
+        }
+
+        #bottom {
+            height: 30px;
+            width: 100%;
+            position: fixed;
+            margin-left: 30px;
+            padding-top: 10px;
+        }
+
+        #bo2 {
+            margin-left: 40px;
+        }
+
+        #bo3 {
+            margin-left: 43px;
+
+        }
+
+        #bo4 {
+            margin-left: 43px;
+
+        }
+
+        .pro {
+            height: 25px;
+            width: 25px;
+            border: 3px solid;
+            border-radius: 50%;
+            margin-left: 300px;
+            margin-top: -25px;
+            background-color: grey;
+        }
+
+        .pic1 {
+            height: 40px;
+            width: 40px;
+            border: 1px solid;
+            margin-top: 40px;
+            margin-left: 10px;
+            border-radius: 50%;
+        }
+
+        #dot1 {
+            margin-left: 330px;
+        }
+
+        .p7 {
+            margin-top: -25px;
+            margin-left: 50px;
+        }
+
+        #p8 {
+            margin-left: 50px;
+
+        }
+
+        #dot1 {
+            margin-top: 19px;
+        }
+
+        #p9 {
+            margin-left: 20px;
+        }
+
+        #p10 {
+            margin-left: 20px;
+
+        }
+
+        #p11 {
+            margin-left: 20px;
+
+        }
+
+        #p12 {
+            margin-left: 140px;
+        }
+
+        /* --- RESPONSIVE MEDIA QUERIES --- */
+
+
+        @media screen and (max-width: 1024px) {
+            #bar {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            button {
+                margin-left: 0;
+                position: fixed;
+                right: 20px;
+                top: 90px;
+            }
+        }
+
+
+        @media screen and (max-width: 480px) {
+            #top {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .ins {
+                margin-left: 0;
+                font-size: 24px;
+            }
+
+            #a {
+                position: absolute;
+                left: 15px;
+                top: 15px;
+                padding: 0;
+            }
+
+            button {
+                top: 10px;
+                right: 10px;
+                width: 80px;
+                height: 25px;
+                font-size: 12px;
+            }
+
+            #bar {
+                width: 100%;
+                box-shadow: none;
+                border: none;
+                margin-top: 10px;
+            }
+
+
+            .c1,
+            .c2,
+            .c3,
+            .c4 {
+                height: 60px;
+                width: 65px;
+            }
+
+            .c2,
+            .c3,
+            .c4 {
+                margin-top: -63px;
+            }
+
+
+            #bar img {
+                width: 100%;
+                height: auto;
+            }
+
+
+            #bottom {
+                margin-left: 0;
+                justify-content: space-around;
+                display: flex;
+                background: white;
+                left: 0;
+                border-top: 1px solid #dbdbdb;
+            }
+
+            #bo2,
+            #bo3,
+            #bo4 {
+                margin-left: 0;
+            }
+
+            .pro {
+                margin-left: 0;
+                margin-top: -3px;
+            }
+
+
+            #p6,
+            #p12 {
+                margin-left: auto;
+                padding-right: 15px;
+            }
+
+            .like,
+            #like {
+                padding: 0 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="top">
+        <nav>
+
+            <a href=""><i id="a" class="fa-solid fa-plus fa-sm" style="color: #121211;"></i></a>
+            <button><a id="b" href="./login.html">Logout</a></button>
+            <h1 class="ins">instagram</h1>
+        </nav>
+    </div>
+    <div id="bar">
+
+        <div id="">
+            <div class="c1">
+                <p class="name1">Your story</p>
+            </div>
+            <div class="c2">
+                <p class="name2">Hari</p>
+            </div>
+            <div class="c3">
+                <p class="name3">mad</p>
+            </div>
+            <div class="c4">
+                <p class="name3">tharun</p>
+            </div>
+        </div>
+        <section>
+            <div class="pic"><i id="dot" class="fa-solid fa-ellipsis-vertical fa-xl" style="color: #111212;"></i>
+                <p class="p1">coding</p>
+                <p id="p2">India</p>
+            </div>
+            <img src="https://picsum.photos/380/440?random=1" alt="">
+            <div id="like">
+                <i onclick="toggleLike(this)" class="fa-regular fa-heart fa-xl" style="color: #111213;"></i>
+                <i id="p3" class="fa-regular fa-comment fa-xl" style="color: #1e1e1f;"></i>
+
+                <i id="p4" class="fa-solid fa-repeat fa-xl" style="color: #111212;"></i>
+                <i id="p5" class="fa-solid fa-share fa-xl" style="color: #111212;"></i>
+                <i id="p6" class="fa-regular fa-bookmark fa-xl" style="color: #0c0d0d;"></i>
+            </div>
+        </section>
+        <div id="bottom">
+            <a href="./index.html"><i id="bo1" class="fa-regular fa-house fa-xl" style="color: #0a0a0a;"></i></a>
+            <a href=""><i id="bo2" class="fa-solid fa-play fa-xl" style="color: #121212;"></i></a>
+            <a href=""> <i id="bo3" class="fa-solid fa-share fa-xl" style="color: #111212;"></i></a>
+            <a href="./search.html"><i id="bo4" class="fa-solid fa-magnifying-glass fa-xl"
+                    style="color: #0c0d0d;"></i></a>
+            <div class="pro"></div>
+        </div>
+        <article>
+            <div class="pic1"><i id="dot1" class="fa-solid fa-ellipsis-vertical fa-xl" style="color: #111212;"></i>
+                <p class="p7">nature</p>
+                <p id="p8">India</p>
+            </div>
+            <img src="https://picsum.photos/380/440?random=1" alt="">
+            <div class="like">
+                <i onclick="toggleLike(this)" class="fa-regular fa-heart fa-xl" style="color: #111213;"></i>
+                <i id="p9" class="fa-regular fa-comment fa-xl" style="color: #1e1e1f;"></i>
+
+                <i id="p10" class="fa-solid fa-repeat fa-xl" style="color: #111212;"></i>
+                <i id="p11" class="fa-solid fa-share fa-xl" style="color: #111212;"></i>
+                <i id="p12" class="fa-regular fa-bookmark fa-xl" style="color: #0c0d0d;"></i>
+
+
+            </div>
+
+    </div>
+
+    </article>
+
+
+
+
+    <p id="likeCount"></p>
+
+
+
+    </div>
+
+    <script>
+        let isLiked = false;
+
+        // LIKE FUNCTION
+        function toggleLike(icon) {
+            if (icon.classList.contains("fa-regular")) {
+                icon.classList.remove("fa-regular");
+                icon.classList.add("fa-solid");
+                icon.style.color = "red";
+            } else {
+                icon.classList.remove("fa-solid");
+                icon.classList.add("fa-regular");
+                icon.style.color = "black";
+            }
+        }
+
+        // COMMENT FUNCTION
+        function addComment() {
+            let input = document.getElementById("commentInput");
+            let text = input.value.trim();
+
+            if (text === "") return;
+
+            let p = document.createElement("p");
+            p.innerText = text;
+
+            document.getElementById("comments").appendChild(p);
+            input.value = "";
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>

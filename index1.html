@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+
+    }
+
+    #new {
+      background: linear-gradient(10deg, white 50%, #2b2b2b 5%);
+      color: white;
+      height: 1050px;
+    }
+
+    .pre {
+      color: orange;
+    }
+
+    .pre:hover {
+      background-color: orange;
+      border: none;
+
+    }
+
+    nav {
+      display: flex;
+      color: white;
+    }
+
+    ul {
+      display: flex;
+      justify-content: end;
+      gap: 10px;
+      padding-left: 490px;
+    }
+
+    li {
+      list-style-type: none;
+      margin-left: 50px;
+      padding-top: 25px;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .top {
+      color: white;
+      padding-left: 840px;
+      padding-top: 90px;
+    }
+
+    button {
+      margin-top: 50px;
+      margin-left: 70px;
+      padding: 10px;
+      border: none;
+      border-radius: 30px;
+      width: 160px;
+      background-color: #32a097;
+      color: white;
+      font-size: 15px;
+    }
+
+    #card {
+      height: 310px;
+      width: 450px;
+      border: 1px solid wheat;
+      border-radius: 30px;
+      background-color: white;
+      margin-top: -280px;
+      margin-left: 200px;
+      transform: rotate(-7deg);
+    }
+
+    .card1 {
+      height: 80px;
+      width: 300px;
+      margin-top: 5px;
+      border: 1px solid wheat;
+      background-color: whitesmoke;
+      display: flex;
+
+      padding-left: 10px;
+      justify-content: space-evenly;
+    }
+
+    .box1 {
+      height: 65px;
+      width: 60px;
+      border: none;
+      border-radius: 10px;
+      background-color: #5ac8fa;
+      margin-top: 6px;
+    }
+
+    .box2 {
+      height: 65px;
+      width: 60px;
+      border: none;
+      border-radius: 10px;
+      background-color: #9be77d;
+      margin-top: 6px;
+
+
+    }
+
+    .box3 {
+      height: 65px;
+      width: 60px;
+      border: none;
+      border-radius: 10px;
+      background-color: #ffd166;
+      padding-left: 10px;
+      margin-top: 6px;
+
+    }
+
+    .box4 {
+      height: 65px;
+      width: 60px;
+      border: none;
+      border-radius: 10px;
+      background-color: #ff6b6b;
+      padding-left: 10px;
+      margin-top: 6px;
+
+    }
+
+    .bo {
+      height: 300px;
+      width: 310px;
+      border: 1px solid wheat;
+      margin-left: 20px;
+      margin-top: 5px;
+    }
+
+    .line1 {
+      height: 30px;
+      width: 290px;
+      margin-left: 10px;
+      border: 1px solid wheat;
+      margin-top: 20px;
+    }
+
+    .line2 {
+      height: 30px;
+      width: 290px;
+      margin-left: 10px;
+      border: 1px solid wheat;
+      margin-top: px;
+    }
+
+    .line3 {
+      height: 30px;
+      width: 290px;
+      margin-left: 10px;
+      border: 1px solid wheat;
+      margin-top: px;
+    }
+
+    .line4 {
+      height: 30px;
+      width: 290px;
+      margin-left: 10px;
+      border: 1px solid wheat;
+      margin-top: px;
+    }
+
+    .line5 {
+      height: 30px;
+      width: 290px;
+      margin-left: 10px;
+      border: 1px solid wheat;
+      margin-top: px;
+    }
+
+    .line6 {
+      height: 30px;
+      width: 290px;
+      margin-left: 10px;
+      border: 1px solid wheat;
+      margin-top: px;
+    }
+
+    .mark1 {
+      height: 7px;
+      width: 150px;
+      border: 1px solid wheat;
+      border-radius: 30px;
+      margin-top: 10px;
+      margin-left: 20px;
+      background-color: grey;
+    }
+
+    .mark2 {
+      height: 7px;
+      width: 100px;
+      border: 1px solid wheat;
+      border-radius: 30px;
+      margin-top: 10px;
+      margin-left: 20px;
+      background-color: grey;
+    }
+
+    .mark3 {
+      height: 7px;
+      width: 150px;
+      border: 1px solid wheat;
+      border-radius: 30px;
+      margin-top: 10px;
+      margin-left: 20px;
+      background-color: grey;
+    }
+
+    .mark4 {
+      height: 7px;
+      width: 100px;
+      border: 1px solid wheat;
+      border-radius: 30px;
+      margin-top: 10px;
+      margin-left: 20px;
+      background-color: grey;
+    }
+
+    .mark5 {
+      height: 7px;
+      width: 150px;
+      border: 1px solid wheat;
+      border-radius: 30px;
+      margin-top: 10px;
+      margin-left: 20px;
+      background-color: grey;
+    }
+
+    .mark6 {
+      height: 7px;
+      width: 100px;
+      border: 1px solid wheat;
+      border-radius: 30px;
+      margin-top: 10px;
+      margin-left: 20px;
+      background-color: grey;
+    }
+
+    .bo1 {
+      height: 300px;
+      width: 90px;
+      border: 1px solid wheat;
+      margin-top: -300px;
+      margin-left: 330px;
+    }
+
+    .id1 {
+      height: 10px;
+      width: 25px;
+      border: 1px solid wheat;
+      border-radius: 30px;
+      margin-left: 240px;
+      margin-top: -10px;
+      background-color: #9be77d;
+    }
+
+    .id1 {
+      height: 10px;
+      width: 25px;
+      border: 1px solid wheat;
+      border-radius: 30px;
+      margin-left: 240px;
+      margin-top: -10px;
+      background-color: #ff6b6b;
+    }
+
+    .id2 {
+      height: 10px;
+      width: 25px;
+      border: 1px solid wheat;
+      border-radius: 30px;
+      margin-left: 240px;
+      margin-top: -10px;
+      background-color: yellow;
+    }
+
+    .id3 {
+      height: 10px;
+      width: 25px;
+      border: 1px solid wheat;
+      border-radius: 30px;
+      margin-left: 240px;
+      margin-top: -10px;
+      background-color: #9be77d;
+    }
+
+    .id4 {
+      height: 10px;
+      width: 25px;
+      border: 1px solid wheat;
+      border-radius: 30px;
+      margin-left: 240px;
+      margin-top: -10px;
+      background-color: #ff6b6b;
+    }
+
+    .id5 {
+      height: 10px;
+      width: 25px;
+      border: 1px solid wheat;
+      border-radius: 30px;
+      margin-left: 240px;
+      margin-top: -10px;
+      background-color: yellow;
+      opacity: 10;
+    }
+
+    .id6 {
+      height: 10px;
+      width: 25px;
+      border: 1px solid wheat;
+      border-radius: 30px;
+      margin-left: 240px;
+      margin-top: -10px;
+      background-color: #9be77d;
+    }
+
+    .bo1 {
+      height: 300px;
+      width: 90px;
+      border: 1px solid wheat;
+    }
+
+    #bo2 {
+      height: 20px;
+      width: 70px;
+      border: 1px solid wheat;
+      margin-top: 10px;
+      margin-left: 10px;
+      border-radius: 10px 10px 0px 0px;
+      background-color: lightgrey;
+    }
+
+    #bo3 {
+      height: 60px;
+      width: 60px;
+      border: 1px solid wheat;
+      border-radius: 50%;
+      margin-top: 10px;
+      margin-left: 13px;
+      background-color: lightblue;
+    }
+
+    #bo4 {
+      height: 20px;
+      width: 70px;
+      border: 1px solid wheat;
+      margin-left: 10px;
+      margin-top: 10px;
+      background-color: lightgrey;
+    }
+
+    #bo5 {
+      height: 8px;
+      width: 70px;
+      border: 1px solid wheat;
+      margin-left: 10px;
+      margin-top: 10px;
+      background-color: lightgrey;
+      border-radius: 20px;
+    }
+
+    #bo6 {
+      height: 8px;
+      width: 50px;
+      border: 1px solid wheat;
+      margin-left: 10px;
+      margin-top: 10px;
+      background-color: lightgrey;
+      border-radius: 20px;
+
+    }
+
+    #bo7 {
+      height: 8px;
+      width: 40px;
+      border: 1px solid wheat;
+      margin-left: 10px;
+      margin-top: 10px;
+      background-color: lightgrey;
+      border-radius: 20px;
+
+    }
+
+    #bo8 {
+      height: 8px;
+      width: 80px;
+      border: 1px solid wheat;
+      margin-left: 10px;
+      margin-top: 10px;
+      background-color: lightgrey;
+      border-radius: 20px;
+
+    }
+
+    #bo9 {
+      height: 8px;
+      width: 70px;
+      border: 1px solid wheat;
+      margin-left: 10px;
+      margin-top: 10px;
+      background-color: lightgrey;
+      border-radius: 20px;
+
+    }
+
+    .hexagon {
+      width: 70px;
+      height: 50px;
+      background: #32a097;
+      padding-top: 10px;
+      padding-left: 5px;
+      clip-path: polygon(25% 0%,
+          75% 0%,
+          100% 50%,
+          75% 100%,
+          25% 100%,
+          0% 50%);
+      margin-left: 710px;
+      margin-top: -59px;
+    }
+
+    .hexa1 {
+      height: 35px;
+      width: 35px;
+      border: 1px solid white;
+      border-radius: 50%;
+      margin-left: 14px;
+      background-color: white;
+
+    }
+
+    #icon {
+      width: 70px;
+      height: 60px;
+      background: lightblue;
+      padding-top: 10px;
+      padding-left: 5px;
+      clip-path: polygon(25% 0%,
+          75% 0%,
+          100% 50%,
+          75% 100%,
+          25% 100%,
+          0% 50%);
+      margin-left: 257px;
+      margin-top: px;
+      position: relative;
+      z-index: 2;
+    }
+
+    #icon1 {
+      width: 70px;
+      height: 60px;
+      background: lightgreen;
+      padding-top: 10px;
+      padding-left: 5px;
+      clip-path: polygon(25% 0%,
+          75% 0%,
+          100% 50%,
+          75% 100%,
+          25% 100%,
+          0% 50%);
+      margin-left: 314px;
+      margin-top: -70px;
+      z-index: 1;
+      position: absolute;
+    }
+
+    #icon2 {
+      width: 70px;
+      height: 60px;
+      background: yellow;
+      padding-top: 10px;
+      padding-left: 5px;
+      clip-path: polygon(25% 0%,
+          75% 0%,
+          100% 50%,
+          75% 100%,
+          25% 100%,
+          0% 50%);
+      margin-left: 370px;
+      margin-top: -70px;
+
+      position: absolute;
+    }
+
+    .i0 {
+      height: 40px;
+      width: 40px;
+      border: 1px solid white;
+      border-radius: 50%;
+      background-color: white;
+      margin: 5px;
+      margin-left: 11px;
+    }
+
+    .i1 {
+      height: 40px;
+      width: 40px;
+      border: 1px solid white;
+      border-radius: 50%;
+      background-color: white;
+      margin: 5px;
+      margin-left: 11px;
+    }
+
+    .i2 {
+      height: 40px;
+      width: 40px;
+      border: 1px solid white;
+      border-radius: 50%;
+      background-color: white;
+      margin: 5px;
+      margin-left: 11px;
+    }
+
+    .i3 {
+      height: 40px;
+      width: 40px;
+      border: 1px solid white;
+      border-radius: 50%;
+      background-color: white;
+      margin: 5px;
+      margin-left: 11px;
+      font-size: 27px;
+      padding-left: 2px;
+    }
+
+    .i4 {
+      height: 40px;
+      width: 40px;
+      border: 1px solid white;
+      border-radius: 50%;
+      background-color: white;
+      margin: 5px;
+      margin-left: 11px;
+      font-size: 25px;
+      padding-left: 3px;
+    }
+
+    .icon3 {
+      width: 70px;
+      height: 60px;
+      background: orange;
+      padding-top: 10px;
+      padding-left: 5px;
+      clip-path: polygon(25% 0%,
+          75% 0%,
+          100% 50%,
+          75% 100%,
+          25% 100%,
+          0% 50%);
+      margin-left: 970px;
+      margin-top: -270px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .icon4 {
+      width: 70px;
+      height: 60px;
+      background: silver;
+      padding-top: 10px;
+      padding-left: 5px;
+      clip-path: polygon(25% 0%,
+          75% 0%,
+          100% 50%,
+          75% 100%,
+          25% 100%,
+          0% 50%);
+      margin-left: 1030px;
+      margin-top: -70px;
+      position: absolute;
+
+    }
+
+    .code {
+      width: 70px;
+      height: 60px;
+      background: #32a097;
+      padding-top: 10px;
+      padding-left: 5px;
+      clip-path: polygon(25% 0%,
+          75% 0%,
+          100% 50%,
+          75% 100%,
+          25% 100%,
+          0% 50%);
+      margin-left: 880px;
+      margin-top: 100px;
+    }
+
+    .code1 {
+      height: 40px;
+      width: 40px;
+      border: 1px solid white;
+      border-radius: 50%;
+      background-color: white;
+      margin: 5px;
+      margin-left: 11px;
+      font-size: 25px;
+      color: #32a097;
+      padding-left: 3px;
+      padding-top: 5px;
+    }
+
+    .c1 {
+      height: 280px;
+      width: 270px;
+      border: 1px solid white;
+      box-shadow: 0px 0px 2px;
+      border-radius: 30px;
+      margin-left: 1070px;
+      margin-top: -240px;
+      background: linear-gradient(to bottom,
+          #5ac8fa 70%,
+          white 40%);
+      position: relative;
+      animation: blue 5s infinite;
+    }
+
+    @keyframes blue {
+      0% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(12%);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    .c2 {
+      height: 250px;
+      width: 250px;
+      border: 1px solid white;
+      box-shadow: 0px 0px 2px;
+      border-radius: 30px;
+      margin-left: 970px;
+      margin-top: -240px;
+      opacity: 0.6;
+      background: linear-gradient(to bottom,
+          #9be77d 70%,
+          white 40%);
+      position: absolute;
+      animation: green 6s infinite;
+    }
+
+    @keyframes green {
+      0% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(12%);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    .c3 {
+      height: 200px;
+      width: 300px;
+      border: 1px solid white;
+      box-shadow: 0px 0px 2px;
+      opacity: 0.2;
+      border-radius: 30px;
+      margin-left: 890px;
+      margin-top: -220px;
+      background: linear-gradient(to bottom,
+          #ff6b6b 70%,
+          white 40%);
+
+      position: absolute;
+      animation: red 7s infinite;
+    }
+
+    @keyframes red {
+      0% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(12%);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    .c4 {
+      height: 80px;
+      width: 60px;
+      border: 1px solid white;
+      border-radius: 50%;
+      margin-top: 160px;
+      margin-left: 120px;
+      background-color: white;
+      font-size: 40px;
+      padding-left: 40px;
+      padding-top: 20px;
+      opacity: 0.8;
+    }
+
+    section {
+      margin-top: 70px;
+    }
+
+    .table {
+      height: 400px;
+      width: 800px;
+      border: 1px solid white;
+      border-radius: 5px;
+      margin-left: 350px;
+      box-shadow: 0px 0px 3px;
+      overflow-y: scroll;
+    }
+
+    .t1 {
+      height: 50px;
+      width: 800px;
+      border: 1px solid lightgrey;
+      background-color: lightgrey;
+      margin-left: 350px;
+      margin-top: 40px;
+    }
+
+    .t2 {
+      height: 28px;
+      width: 60px;
+      background-color: white;
+      margin-left: 10px;
+      margin-top: 15px;
+      text-align: center;
+      padding-top: 7px;
+      position: relative;
+    }
+
+    .t3 {
+      height: 28px;
+      width: 60px;
+      background-color: lightgrey;
+      margin-left: 71px;
+      text-align: center;
+      padding-top: 7px;
+      position: absolute;
+      border: 1px solid grey;
+      margin-top: -35px;
+    }
+
+    .t3:hover {
+      background-color: white;
+    }
+
+    .t4 {
+      height: 28px;
+      width: 60px;
+      background-color: lightgrey;
+      margin-left: 132px;
+      margin-top: -35px;
+      text-align: center;
+      padding-top: 7px;
+      position: absolute;
+      border: 1px solid grey;
+    }
+
+    .t4:hover {
+      background-color: white;
+    }
+
+    .t5 {
+      height: 28px;
+      width: 60px;
+      background-color: lightgrey;
+      margin-left: 530px;
+      margin-top: -41px;
+      text-align: center;
+      padding-top: 7px;
+      position: absolute;
+      border: 1px solid grey;
+    }
+
+    .t6 {
+      height: 28px;
+      width: 60px;
+      background-color: green;
+      margin-left: 610px;
+      margin-top: -41px;
+      text-align: center;
+      padding-top: 7px;
+      position: absolute;
+      border: 1px solid grey;
+      color: white;
+    }
+
+    .t7 {
+      height: 28px;
+      width: 90px;
+      background-color: black;
+      margin-left: 690px;
+      margin-top: -41px;
+      text-align: center;
+      padding-top: 7px;
+      position: absolute;
+      border: 1px solid grey;
+      color: white;
+    }
+
+    footer {
+      height: 900px;
+      border: 1px solid white;
+      box-shadow: 2px 2px 10px;
+      margin-top: 100px;
+    }
+
+    .fo1 {
+      width: 70px;
+      height: 60px;
+      background: #ff6b6b;
+      padding-top: 10px;
+      padding-left: 5px;
+      clip-path: polygon(25% 0%,
+          75% 0%,
+          100% 50%,
+          75% 100%,
+          25% 100%,
+          0% 50%);
+      margin-top: -937px;
+      margin-left: 700px;
+    }
+
+    .fo2 {
+      height: 40px;
+      width: 40px;
+      border: 1px solid white;
+      border-radius: 50%;
+      background-color: white;
+      margin-left: 12px;
+      margin-top: 4px;
+    }
+
+    article {
+
+      margin-top: 200px;
+      border: 1px solid white;
+
+    }
+
+    .u {
+      color: black;
+
+    }
+
+    article ul {
+      margin-left: -200px;
+      margin-top: -20px;
+    }
+
+    hr {
+      width: 600px;
+      margin-top: 300px;
+    }
+
+    span {
+      margin-left: 100px;
+      line-height: 30px;
+    }
+
+    .our {
+      color: lightblue;
+      margin-left: 697px;
+      font-size: 18px;
+      margin-top: 50px;
+    }
+
+    /* --- RESPONSIVE MEDIA QUERIES --- */
+   
+
+    @media screen and (max-width: 1200px) {
+      ul {
+        padding-left: 0;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .top {
+        padding-left: 5%;
+        text-align: center;
+      }
+
+      #card {
+        margin-left: 10%;
+        width: 80%;
+        transform: rotate(0);
+      }
+
+      .icon3,
+      .icon4,
+      .c1,
+      .c2,
+      .c3 {
+        display: none;
+      }
+
+    
+      .table,
+      .t1 {
+        width: 90%;
+        margin-left: 5%;
+      }
+    }
+
+   
+    @media screen and (max-width: 768px) {
+      #new {
+        height: auto;
+        padding-bottom: 50px;
+        background: #2b2b2b;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav h2 {
+        margin-left: 0 !important;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        margin-left: 0;
+        padding: 0;
+        justify-content: center;
+      }
+
+      nav li {
+        margin: 10px;
+        padding-top: 10px;
+      }
+
+      .top {
+        padding-top: 40px;
+      }
+
+      .top h1 {
+        font-size: 28px;
+      }
+
+      .top p {
+        font-size: 14px;
+        padding: 20px;
+      }
+
+      button {
+        margin: 20px auto;
+        display: block;
+      }
+
+     
+      #card {
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 320px;
+        height: auto;
+        padding-bottom: 20px;
+      }
+
+      .bo1 {
+        margin-left: 220px;
+        margin-top: -300px;
+      }
+
+      
+      h1,
+      h2,
+      h3,
+      p {
+        margin-left: 5% !important;
+        margin-right: 5% !important;
+        text-align: center !important;
+      }
+
+      .hexagon,
+      .fo1,
+      .code {
+        display: none;
+      }
+
+      
+
+      section {
+        margin-top: 40px;
+      }
+
+      #icon,
+      #icon1,
+      #icon2 {
+        margin-left: 35% !important;
+        margin-top: 10px !important;
+        position: static !important;
+        display: inline-block;
+      }
+
+     
+      .t1 {
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px 0;
+      }
+
+      .t2,
+      .t3,
+      .t4,
+      .t5,
+      .t6,
+      .t7 {
+        position: static !important;
+        margin: 5px !important;
+      }
+
+      .table {
+        width: 95%;
+        margin-left: 2.5% !important;
+      }
+
+      /* Footer */
+      footer {
+        height: auto;
+        padding-bottom: 30px;
+      }
+
+      footer p,
+      footer h1 {
+        margin-left: 5% !important;
+        width: 90%;
+      }
+
+      hr {
+        width: 80%;
+        margin: 30px auto;
+      }
+
+      article ul {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0 !important;
+      }
+
+      article li {
+        margin: 5px 0;
+      }
+
+      .our {
+        margin-left: 0 !important;
+        display: block;
+        text-align: center;
+      }
+    }
+
+   
+    @media screen and (max-width: 480px) {
+      #card {
+        width: 280px;
+      }
+
+      .bo1 {
+        display: none;
+      }
+
+     
+      .bo {
+        margin-left: 5px;
+      }
+
+      .top h1 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="new">
+    <nav>
+      <h2 style="color: white; margin-left: 200px;padding-top: 10px;">Leetcode</h2>
+      <ul>
+        <li><a class="pre" href="">Premium</a></li>
+        <li><a href="">Explore</a></li>
+        <li><a href="">Product</a></li>
+        <li><a href="">Developer</a></li>
+        <li><a href="./signin.html">Sign in</a></li>
+      </ul>
+    </nav>
+    <div class="top">
+      <h1 style="font-size: 35px;">A New Way to Learn</h1>
+      <p style="padding-top: 30px;color: grey;line-height: 25px;">LeetCode is the best platform to help you enhance your
+        skills, expand <br>your knowledge and prepare for technical interviews.</p>
+      <button><a href="./signup.html">Create Account</a></button>
+    </div>
+    <div id="card">
+      <div class="bo">
+        <div class="card1">
+          <div class="box1"></div>
+          <div class="box2"></div>
+          <div class="box3"></div>
+          <div class="box4"></div>
+        </div>
+        <div class="line1">
+          <div class="mark1"></div>
+          <div class="id1"></div>
+        </div>
+        <div class="line2">
+          <div class="mark2"></div>
+          <div class="id2"></div>
+
+        </div>
+        <div class="line3">
+          <div class="mark3"></div>
+          <div class="id3"></div>
+
+        </div>
+        <div class="line4">
+          <div class="mark4"></div>
+          <div class="id4"></div>
+
+        </div>
+        <div class="line5">
+          <div class="mark5"></div>
+          <div class="id5"></div>
+
+        </div>
+        <div class="line6">
+          <div class="mark6"></div>
+          <div class="id6"></div>
+
+        </div>
+      </div>
+      <div class="bo1">
+        <div id="bo2"></div>
+        <div id="bo3"></div>
+        <div id="bo4"></div>
+        <div id="bo5"></div>
+        <div id="bo6"></div>
+        <div id="bo7"></div>
+        <div id="bo8"></div>
+        <div id="bo9"></div>
+
+      </div>
+    </div>
+  </div>
+
+  <h1 style="color: #32a097;font-size: 30px;margin-left: 490px;margin-top: -400px;">Start Exploring</h1>
+  <div class="hexagon">
+    <div class="hexa1">
+      <p style="font-size: 25px;margin-top: -1px;color: #32a097;">&#127891;</p>
+    </div>
+  </div>
+  <p style="margin-left: 280px;font-size: 17px;color: grey;font-weight: lighter;line-height: 25px;">Explore is a
+    well-organized tool that helps you get the most out of <br>LeetCode by providing structure to guide your progress
+    towards the <br>next step in your programming career.</p>
+  <h3 style="margin-top:60px;"><a style="color: #32a097;margin-left: 660px;" href="./started.html">Get started &#10095;
+    </a></h3>
+  <div class="c3"></div>
+  <div class="c2"></div>
+  <div class="c1">
+    <div class="c4">&#9654;</div>
+  </div>
+  <section>
+    <div id="icon">
+      <div class="i0">
+        <p style="color: lightblue;font-size: 17px;margin-top:10px;margin-left: 2px;">4050</p>
+      </div>
+    </div>
+    <div id="icon1">
+      <div class="i1">
+        <img src="./images/group.png" alt="" height="30px" style="margin-left: 5px;margin-top: 1px;">
+      </div>
+    </div>
+
+    <div id="icon2">
+      <div class="i2">
+        <img src="./images/trophy.png" alt="" height="25px" style="margin-top: 5px;margin-left: 7px;">
+      </div>
+    </div>
+    <h2 style="color:#5ac8fa ;margin-left: 250px;">Questions, Community & Contests</h2>
+    <p style="color: grey;margin-left: 240px;font-size: 18px;line-height: 25px;font-size: 17px;">Over 4050 questions for
+      you to practice. Come and join one of the <br> largest tech communities with hundreds of thousands of active users
+      <br> and participate in our contests to challenge yourself and earn <br> rewards.
+    </p>
+    <p style="margin-left: 240px;"><a style="color: #32a097;" href="">View Questions &#10095;</a></p>
+  </section>
+  <div class="icon3">
+    <div class="i3">&#x1F4BC;</div>
+  </div>
+  <div class="icon4">
+    <div class="i4">&#127970;</div>
+  </div>
+  <h2 style="color: orange;margin-left: 1000px;">Companies & Candidates</h2>
+  <p style="color: grey;margin-left: 1000px;line-height: 25px;font-size: 17px;">Not only does LeetCode prepare
+    candidates for technical interviews, <br> we also help companies identify top technical talent. From <br> sponsoring
+    contests to providing online assessments and training, <br> we offer numerous services to businesses.</p>
+  <p style="margin-left: 1000px;"><a style="color: skyblue;" href="">Business Opportunities &#10095;</a></p>
+  <div class="code">
+    <div class="code1">&lt;&sol;&gt;</div>
+  </div>
+  <h2 style="color: #32a097;margin-left: 860px;margin-top: 40px;">Developer</h2>
+  <p style="color: grey;margin-left: 600px;line-height: 25px;font-size: 17px;">We now support 14 popular coding
+    languages. At our core, LeetCode is about <br> developers. Our powerful development tools such as Playground help
+    you test, <br> debug and even write your own projects online.</p>
+  <div class="t1">
+    <div class="t2">c++</div>
+    <div class="t3">Java</div>
+    <div class="t4">Python</div>
+    <div class="t5">Copy</div>
+    <div class="t6">Run</div>
+    <div class="t7">Playground</div>
+  </div>
+  <div class="table">
+
+    <p style="margin-left: 100px;">/**
+      * Definition for singly-linked. <br>
+      * struct ListNode { <br>
+      * int val; <br>
+      * ListNode *next; <br>
+      * ListNode(int x) : val(x), next(NULL) {} <br>
+      * }; <br>
+      */ <br>
+
+      void trimLeftTrailingSpaces(string &input) { <br>
+      input.erase(input.begin(), find_if(input.begin(), input.end(), [](int ch) { <br>
+      return !isspace(ch); <br>
+      })); <br>
+      } <br>
+
+      void trimRightTrailingSpaces(string &input) { <br>
+      input.erase(find_if(input.rbegin(), input.rend(), [](int ch) { <br>
+      return !isspace(ch); <br>
+      }).base(), input.end()); <br>
+      } <br>
+
+      vector<int> stringToIntegerVector(string input) { <br>
+        vector<int> output; <br>
+          trimLeftTrailingSpaces(input); <br>
+          trimRightTrailingSpaces(input); <br>
+          input = input.substr(1, input.length() - 2); <br>
+          stringstream ss; <br>
+          ss.str(input); <br>
+          string item; <br>
+          char delim = ','; <br>
+          while (getline(ss, item, delim)) { <br>
+          output.push_back(stoi(item)); <br>
+          } <br>
+          return output; <br>
+          } <br>
+
+          ListNode* stringToListNode(string input) { <br>
+          // Generate list from the input
+
+
+          vector<int> list = stringToIntegerVector(input); <br>
+
+            // Now convert that list into linked list
+
+            ListNode* dummyRoot = new ListNode(0); <br>
+            ListNode* ptr = dummyRoot; <br>
+            for(int item : list) { <br>
+            ptr->next = new ListNode(item); <br>
+            ptr = ptr->next; <br>
+            } <br>
+            ptr = dummyRoot->next; <br>
+            delete dummyRoot; <br>
+            return ptr; <br>
+            } <br>
+
+            void prettyPrintLinkedList(ListNode* node) { <br>
+            while (node && node->next) { <br>
+            cout << node->val << "->" ; <br>
+                node = node->next; <br>
+                } <br>
+
+                if (node) { <br>
+                cout << node->val << endl; <br>
+                    } else { <br>
+                    cout << "Empty LinkedList" << endl; <br>
+                      } <br>
+                      } <br>
+
+                      int main() { <br>
+                      string line; <br>
+                      while (getline(cin, line)) { <br>
+                      ListNode* head = stringToListNode(line); <br>
+                      prettyPrintLinkedList(head); <br>
+                      } <br>
+                      return 0; <br>
+                      }</p>
+  </div>
+
+  <footer>
+    <h1 style="color: red;margin-left: 600px;margin-top: 60px;">Made with &#10084;Gowtham</h1>
+    <p style="margin-left: 430px;color: grey;line-height: 30px;font-size: 18px;">At LeetCode, our mission is to help you
+      improve yourself and land your dream job. <br> We have a sizable repository of interview resources for many
+      companies. In the past <br> few years, our users have landed jobs at top companies around the world.</p>
+    <hr>
+    <p style="margin-left: 500px;margin-top: 60px;">If you are passionate about tackling some of the most interesting
+      problems <br> <span>around, we would love to hear from you.</span> </p>
+    <p><a class="our" href="">Join our Team</a></p>
+    <article>
+      <nav>
+        <p style="color: black;margin-left: 100px;margin-top: -1px;">Copyright © 2025 LeetCode</p>
+        <ul>
+          <li><a class="u" href="">Help Center</a></li>
+          <li><a class="u" href="">Jobs</a></li>
+          <li><a class="u" href="">Bug Bounty</a></li>
+          <li><a class="u" href="">Online Interview</a></li>
+          <li><a class="u" href="">Students</a></li>
+          <li><a class="u" href="">Terms</a></li>
+          <li><a class="u" href="">Privacy policy</a></li>
+        </ul>
+      </nav>
+    </article>
+
+
+  </footer>
+  <div class="fo1">
+    <div class="fo2"></div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+       * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+
+#sign {
+    width: 420px;        
+    height: 820px;       
+    margin: 80px auto;
+    border-radius: 30px;
+    background: #fff;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+    padding: 20px;
+}
+
+
+img {
+    width: 280px;      
+    display: block;
+    margin: 60px auto 30px;
+}
+
+input {
+    width: 320px;     
+    height: 42px;
+    display: block;
+    margin: 18px auto;
+    border-radius: 40px;
+    outline: none;
+    border: none;
+    box-shadow: inset 6px 6px 8px rgba(0,0,0,0.2);
+    padding-left: 20px;
+}
+
+
+button {
+    width: 320px;        
+    height: 40px;
+    display: block;
+    margin: 25px auto;
+    border-radius: 40px;
+    border: none;
+    background-color: #0095f6;
+    color: #fff;
+    box-shadow: 6px 6px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1877f2;
+}
+
+
+.a {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.log {
+    background: #fff;
+    color: #000;
+}
+
+.log a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+
+    @media (max-width: 480px) {
+    #sign {
+        width: 340px;
+        height: 780px;
+        margin-top: 20px;
+    }
+
+    img {
+        width: 240px;
+    }
+
+    input,
+    button {
+        width: 280px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div id="sign">
+        <img src="./images/insta.jpg" alt="">
+        <div class="inp">
+        <input id="email" type="text" placeholder="Phone number or email">
+        <input id="fullname" type="text" placeholder="Full name">
+        <input id="username" type="text" placeholder="Username">
+        <input id="password" type="text" placeholder="Password">
+        </div>
+        <button onclick="signup()">Sign up</button>
+         <div class="a" style="text-align:center;">
+        <hr style="width:40%; display:inline-block;">
+        <span style="padding:0 10px; ">or</span>
+         <hr style="width:40%; display:inline-block;">
+        </div>
+        <button class="log"><a id="b" href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f" style="color: #0f0f0f;;"></i></a><a id="c" href="https://www.facebook.com/">Log in with facebook</a></button>
+        <p>Already have an account ? <a href="./login.html">Log in</a></p>
+        <p id="error" style="color:red; text-align:center; margin-top:10px;"></p>
+
+
+    </div>
+
+          <script>
+          
+function signup() {
+    let fullname = document.getElementById("fullname").value.trim();
+    let username = document.getElementById("username").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value.trim();
+    let error = document.getElementById("error");
+
+    error.innerText = "";
+
+    if (fullname === "" || username === "" || email === "" || password === "") {
+        error.innerText = "All fields are required";
+        return;
+    }
+
+    if (fullname.length < 3) {
+        error.innerText = "Enter your full name";
+        return;
+    }
+
+    if (password.length < 6) {
+        error.innerText = "Password must be at least 6 characters";
+        return;
+    }
+
+    alert("Signup successful!");
+}
+</script>
+
+
+    </script>          
+</body>
+</html>
